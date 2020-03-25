@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Let our staffperson know what they could be doing better.">
+    <title>The Isolation Station Feedback Center</title>
+</head>
+<body>
+    <nav>
+        <span class="navbarToggle" id="jsNavbarToggle">&#9776;</span>
+        <img src="coronavirusvector.png" class="logo" alt="computer-generated image of the coronavirus -- a green sphere with little antennae poking out all over the place">
+        <ul class="navlist" id="jsMenu">
+            <li><a href="index.html" class="navlink">Home Base</a></li>
+            <li><a href="about.html" class="navlink">Visitor Center</a></li>
+            <li><a href="preferences.html" class="navlink">Entertainment Center</a></li>
+            <li><a href="survey.html" class="navlink">Feedback Center</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>The Isolation Station Feedback Center</h1>
+        <p>Where you can provide us with useful information that no one will read regarding your experience on our site.</p>
+    </header>
+    <section class="feedbackFormContainer">
+        <form class="feedbackForm">
+            <label for="name">Your name and all relevant aliases</label>
+            <input type="text" name="name" id="name" required placeholder="Mabel Pines">
+            <label for="email">Your email address</label>
+            <input type="email" name="email" id="email" required placeholder="first.last@gmail.com">
+            <label for="rating">Rate your recommendations on a scale of 0-10</label>
+            <input type="range" min="0" max="10" value="10" step="0.2">
+            <label for="color">What is your favorite color? (Mine is #ac26f9 - responses that contain #9fdb1a will be disregarded)</label>
+            <input type="color" name="color" id="color">
+            <label for="message">Anything you want to say to us?</label>
+            <input type="text" name="message" id="message" placeholder="The Isolation Station is the best thing to ever happen during a global pandemic.">
+            <button>Send it!</button>
+        </form>
+    </section>
+</body>
+</html>
