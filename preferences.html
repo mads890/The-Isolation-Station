@@ -23,67 +23,64 @@
         <h2>The Isolation Station Entertainment Center</h2>
         <p>Where all your non-paywall-protected dreams come true!</p>
     </header>
-    <section class="preferencesFormContainer">
-        <form class="preferencesForm">
-            <label for="animal">Corona makes me sad, please lift my spirits with a cute...</label>
-            <input type="radio" name="animal" id="dog" value="Dog">
-            <input type="radio" name="animal" id="cat" value="Cat">
-            <input type="radio" name="animal" id="fox" value="Fox">
+    <section class="preferences-form-container">
+        <form class="preferences-form">
+            <fieldset id="animal">
+                <legend>Corona makes me sad, please lift my spirits with a cute...</legend>
+                <input type="radio" name="animal" id="dog" value="dog">
+                <label for="dog">Dog</label>
+                <input type="radio" name="animal" id="cat" value="cat">
+                <label for="cat">Cat</label>
+            </fieldset>
 
-            <label for="consumableMedia">As soon as I get these !$@# kids to go to bed, I want to...</label>
-            <input type="radio" name="consumableMedia" id="book" value="Read a book">
-            <input type="radio" name="consumableMedia" id="movie" value="Watch a movie">
-            <input type="radio" name="consumableMedia" id="show" value="Binge a show">
+            <fieldset id="consumable-media">
+                <legend>As soon as I get these !$@# kids to go to bed, I want to...</legend>
+                <input type="radio" name="consumable-media" id="book" value="book" checked>
+                <label for="book">Read a book</label>
+                <input type="radio" name="consumable-media" id="movie" value="movie">
+                <label for="movie">Watch a movie</label>
+                <input type="radio" name="consumable-media" id="show" value="show">
+                <label for="show">Binge a show</label>
+                <input type="radio" name="consumable-media" id="game" value="game">
+                <label for="game">VIDEO GAMES</label>
+            </fieldset>
+            <label for="similar">a book/movie/show/game I already love is:</label>
+            <input type="text" name="similar" id="similar" placeholder="The Lorax">
 
-            <label for="musicGenre">When my partner goes on an hours long trek to find some toilet paper, I want to blast...</label>
-            <select name="musicGenre" id="musicGenre">
-                <option value="alt"></option>
-                <option value="bigBand"></option>
-                <option value="broadway"></option>
-                <option value="disney"></option>
-                <option value="holiday"></option>
-                <option value="classical"></option>
-                <option value="country"></option>
-                <option value="danceParty"></option>
-                <option value="edm"></option>
-                <option value="metal"></option>
-                <option value="pop"></option>
-                <option value="rap"></option>
-                <option value="rb"></option>
-                <option value="reggae"></option>
-                <option value="rock"></option>
-                <option value="60s"></option>
-                <option value="70s"></option>
-                <option value="80s"></option>
-            </select>
+            <label for="music">When my partner goes on an hours-long trek to find some toilet paper, I want to blast music similar to my favorite band:</label>
+            <input type="text" name="music" id="music" placeholder="TheFatRat">
 
             <label for="academic">If I could go back to school, I would study...</label>
             <select name="academic" id="academic">
-                <option value="none"></option>
-                <option value="party"></option>
-                <option value="ai"></option>
-                <option value="archaeology"></option>
-                <option value="bio"></option>
-                <option value="chem"></option>
-                <option value="compSci"></option>
-                <option value="engineering"></option>
-                <option value="genetics"></option>
-                <option value="health"></option>
-                <option value="law"></option>
-                <option value="philosophy"></option>
-                <option value="physics"></option>
-                <option value="polySci"></option>
+                <option value="none">PFFFFFT</option>
+                <option value="party">Partying!!</option>
+                <option value="ai">Artificial Intelligence</option>
+                <option value="gov">Political Science</option>
+                <option value="health">Healthcare</option>
+                <option value="computers">Computer Science</option>
+                <option value="envi">Environmental Science</option>
+                <option value="psych">Psychology</option>
+                <option value="weather">Meteorology</option>
             </select>
-
-            <label for="games">I want to rot my brain with video games!</label>
 
             <button>Give it to me!</button>
         </form>
     </section>
-    <section class="resultsContainer hidden">
 
+    <section class="results-container hidden">
+        <section class="animal-image" id="animal-image"></section>
+        <section class="media-recommendation" id="media-recommendation"></section>
+        <section class="poem hidden" id="poem"></section>
+        <section class="music-recommendation" id="music-recommendation"></section>
+        <section class="academic-recommendation" id="academic-recommendation"></section>
+        <section class="party-school hidden"></section>
     </section>
+
+    <section class="error-container hidden">
+    </section>
+
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="index.js"></script>
+    <script src="preferences.js"></script>
 </body>
 </html>

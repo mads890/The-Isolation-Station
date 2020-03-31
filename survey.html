@@ -23,21 +23,28 @@
         <h1>The Isolation Station Feedback Center</h1>
         <p>Where you can provide us with useful information that no one will read regarding your experience on our site.</p>
     </header>
-    <section class="feedbackFormContainer">
+    <section class="feedback-form-container">
         <form class="feedbackForm">
             <label for="name">Your name and all relevant aliases</label>
             <input type="text" name="name" id="name" required placeholder="Mabel Pines">
             <label for="email">Your email address</label>
             <input type="email" name="email" id="email" required placeholder="first.last@gmail.com">
             <label for="rating">Rate your recommendations on a scale of 0-10</label>
-            <input type="range" min="0" max="10" value="10" step="0.2">
+            <input type="range" min="0" max="10" value="10" step="0.2" name="rating" id="rating">
             <label for="color">What is your favorite color? (Mine is #ac26f9 - responses that contain #9fdb1a will be disregarded)</label>
             <input type="color" name="color" id="color">
             <label for="message">Anything you want to say to us?</label>
             <input type="text" name="message" id="message" placeholder="The Isolation Station is the best thing to ever happen during a global pandemic.">
-            <button>Send it!</button>
+            <button type="submit">Send it!</button>
         </form>
     </section>
+
+    <section class="results-container hidden">
+        <h2>Thank you!</h2>
+        <p>We really appreciate your input. Our team will carefully review your feedback and integrate your ideas into our program sometime before the next pandemic.</p>
+        <button type="submit">Retake the survey!</button>
+    </section>
+
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="index.js"></script>
 </body>

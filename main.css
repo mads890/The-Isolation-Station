@@ -10,6 +10,7 @@ body {
 
 .navbar {
     padding-bottom: 10px;
+    height: 70px;
 }
 
 .navbarToggle {
@@ -39,6 +40,7 @@ body {
     display: inline-block;
     margin-top: 10px;
     margin-left: 20px;
+    height: 50px;
 }
 
 .navlink {
@@ -49,6 +51,10 @@ header, section {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+}
+
+.hidden {
+    display: none;
 }
 
 @media screen and (min-width: 768px) {
