@@ -1,10 +1,10 @@
 'use strict';
 
 function formSubmit() {
-    $('form').submit(event => {
+    $('form').on('click', 'button', event => {
         event.preventDefault();
+        $('feedback-form').reset();
         $('.feedback-form-container').addClass('hidden');
-        $('form').reset();
         $('.results-container').removeClass('hidden');
     })
 }

@@ -27,7 +27,7 @@
         <form class="preferences-form">
             <fieldset id="animal">
                 <legend>Corona makes me sad, please lift my spirits with a cute...</legend>
-                <input type="radio" name="animal" id="dog" value="dog">
+                <input type="radio" name="animal" id="dog" value="dog" checked>
                 <label for="dog">Dog</label>
                 <input type="radio" name="animal" id="cat" value="cat">
                 <label for="cat">Cat</label>
@@ -37,43 +37,34 @@
                 <legend>As soon as I get these !$@# kids to go to bed, I want to...</legend>
                 <input type="radio" name="consumable-media" id="book" value="book" checked>
                 <label for="book">Read a book</label>
-                <input type="radio" name="consumable-media" id="movie" value="movie">
-                <label for="movie">Watch a movie</label>
                 <input type="radio" name="consumable-media" id="show" value="show">
                 <label for="show">Binge a show</label>
-                <input type="radio" name="consumable-media" id="game" value="game">
-                <label for="game">VIDEO GAMES</label>
             </fieldset>
-            <label for="similar">a book/movie/show/game I already love is:</label>
-            <input type="text" name="similar" id="similar" placeholder="The Lorax">
+            <label for="similar">Genre:</label>
+            <input type="text" name="similar" id="similar" placeholder="Smut">
+            <br/>
 
-            <label for="music">When my partner goes on an hours-long trek to find some toilet paper, I want to blast music similar to my favorite band:</label>
-            <input type="text" name="music" id="music" placeholder="TheFatRat">
-
-            <label for="academic">If I could go back to school, I would study...</label>
-            <select name="academic" id="academic">
-                <option value="none">PFFFFFT</option>
-                <option value="party">Partying!!</option>
-                <option value="ai">Artificial Intelligence</option>
-                <option value="gov">Political Science</option>
-                <option value="health">Healthcare</option>
-                <option value="computers">Computer Science</option>
-                <option value="envi">Environmental Science</option>
-                <option value="psych">Psychology</option>
-                <option value="weather">Meteorology</option>
-            </select>
-
+            <label for="food">Provide me with cooking instructions!</label>
+            <input type="radio" name="food" id="give-recipe" value="yes" checked>
+            <label for="give-recipe">Yes</label>
+            <input type="radio" name="food" id="no-recipe" value="no">
+            <label for="no-recipe">No</label>
+            <br/>
+            <label for="joke">Tell me a joke!</label>
+            <input type="radio" name="joke" id="give-joke" value="yes" checked>
+            <label for="give-joke">Yes</label>
+            <input type="radio" name="joke" id="no-joke" value="no">
+            <label for="no-joke">No</label>
+            <br/>
             <button>Give it to me!</button>
         </form>
     </section>
 
     <section class="results-container hidden">
-        <section class="animal-image" id="animal-image"></section>
-        <section class="media-recommendation" id="media-recommendation"></section>
-        <section class="poem hidden" id="poem"></section>
-        <section class="music-recommendation" id="music-recommendation"></section>
-        <section class="academic-recommendation" id="academic-recommendation"></section>
-        <section class="party-school hidden"></section>
+        <section class="animal-image results" id="animal-image"></section>
+        <section class="media-recommendation results" id="media-recommendation"></section>
+        <section class="food-recommendation results" id="food-recommendation"></section>
+        <section class="joke-container results" id="joke-container"></section>
     </section>
 
     <section class="error-container hidden">
