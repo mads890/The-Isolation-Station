@@ -47,19 +47,16 @@ function showShowRecommendation(responseJson) {
     let numWorks = responseJson.results.length - 1
     let randomWork = Math.floor((Math.random() * numWorks))
     $('#media-recommendation').append(`<h2>${responseJson.results[randomWork].title}</h2><img src="${responseJson.results[randomWork].image_url}"><p>More info and videos available <a href="${responseJson.results[randomWork].url}">here</a>!`);
-    console.log('showShowRecommendation ran');
 }
 
 function showRecipe(responseJson) {
     $('#food-recommendation').empty();
     $('#food-recommendation').append(`<h2>${responseJson.meals[0].strMeal}</h2><img src="${responseJson.meals[0].strMealThumb}"><p>Find the video tutorial <a href="${responseJson.meals[0].strYoutube}">here</a>!</p>`);
-    console.log(responseJson);
-    console.log('showRecipe ran');
 }
 
 function noRecipe() {
     $('#food-recommendation').empty();
-    $('#food-recommendation').append('<iframe src="https://giphy.com/embed/5D44HsQatBVvO" width="480" height="271" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/angry-mad-hungry-5D44HsQatBVvO">via GIPHY</a></p>');
+    $('#food-recommendation').append('<p>Fine. You don\'t want a recipe?</p><br/><iframe src="https://giphy.com/embed/5D44HsQatBVvO" width="480" height="271" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/angry-mad-hungry-5D44HsQatBVvO">via GIPHY</a></p>');
 }
 
 function showJoke(responseJson) {
@@ -72,7 +69,7 @@ function noJoke() {
     $('#joke-container').append('<p>Seriously? Who doesn\'t like jokes??</p><iframe src="https://giphy.com/embed/12fWLm0gSY8kJa" width="480" height="320" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/robert-downey-jr-iron-man-jon-favreau-12fWLm0gSY8kJa">via GIPHY</a></p>');
 }
 
-function getResults(animal, mediaType, mediaGenre, music, recipe, joke) {
+function getResults(animal, mediaType, mediaGenre, recipe, joke) {
     $('.results-container').removeClass('hidden');
     //animal preference:
     if (animal == 'dog') {
@@ -149,10 +146,9 @@ function getResults(animal, mediaType, mediaGenre, music, recipe, joke) {
     }
     //joke:
     if (joke == 'yes') {
-        const url = 'https://sv443.net/jokeapi/v2/joke/Any?blacklistFlags=nsfw,racist,sexist,religious,political'
+        const url = 'https://sv443.net/jokeapi/v2/joke/Any'
         fetch(url)
         .then(response => {
-            console.log(response)
         if (response.status == 200 || response.status == 201) {
             return response.json();
         }
@@ -177,13 +173,10 @@ function formSubmit() {
         $('.error-container').empty().addClass('hidden');
         let animalPref = $('input[name="animal"]:checked').val();
         let mediaPref = $('input[name="consumable-media"]:checked').val();
-        console.log(mediaPref);
-        let similarMedia = $('#similar').val().toLowerCase().replace(' ', '+');
-        console.log(similarMedia)
-        let musicPref = $('#music').val().toLowerCase().replace(' ', '+');
+        let mediaGenre = $('#genre').val().toLowerCase().replace(' ', '+');
         let recipePref = $('input[name="food"]:checked').val();
         let jokePref = $('input[name="joke"]:checked').val();
-        getResults(animalPref, mediaPref, similarMedia, musicPref, recipePref, jokePref);
+        getResults(animalPref, mediaPref, mediaGenre, recipePref, jokePref);
     });
 }
 

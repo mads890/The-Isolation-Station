@@ -53,8 +53,22 @@ header, section {
     text-align: center;
 }
 
+form {
+    margin-top: 30px;
+}
+
+button {
+    padding: 10px;
+}
+
 .results {
     margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+}
+
+.results-container {
+    margin-bottom: 50px;
 }
 
 .hidden {
