@@ -20,22 +20,9 @@ function showCatImage(responseJson) {
     $('#animal-image').append(`<img src=${responseJson.file} alt="a very cute kitty!" class="animal-image">`);
 }
 
-function noEntry(media) {
+function noEntry() {
     $('#media-recommendation').empty();
-    if (media == 'book') {
-        $('#media-recommendation').append('<h2>Since you did not enter a genre...</h2><p>My favorite book is The Republic of Thieves! Read it <a href="https://readanybook.com/ebook/the-republic-of-thieves-565249">here</a>!</p>');
-    }
-    else if (media == 'show') {
-        $('#media-recommendation').append('<h2>Since you did not enter a genre...</h2><p>My favorite show is Adventure Time! Watch it on Netflix!</p><p>Or, check out my favorite independent animator\'s newest pilot <a href="https://www.youtube.com/watch?v=Zlmswo0S0e0">here</a>!</p>');
-    }    
-}
-
-function showBookRecommendation(responseJson) {
-    console.log(responseJson)
-    $('#media-recommendation').empty();
-    let numWorks = responseJson.works.length - 1
-    let randomWork = Math.floor((Math.random() * numWorks))
-    $('#media-recommendation').append(`<h2>${responseJson.works[randomWork].title}</h2><p>Written by ${responseJson.works[randomWork].authors[0].name}</p><p>Read it <a href="https://openlibrary.org/search?q=${responseJson.works[randomWork].title}&mode=everything">here</a>!</p>`);
+    $('#media-recommendation').append('<h2>Since you did not enter a genre...</h2><p>My favorite show is Adventure Time! Watch it on Netflix!</p><p>Or, check out my favorite independent animator\'s newest pilot <a href="https://www.youtube.com/watch?v=Zlmswo0S0e0">here</a>!</p>');
 }
 
 function showShowRecommendation(responseJson) {
@@ -66,7 +53,7 @@ function noJoke() {
     $('#joke-container').append('<p>Seriously? Who doesn\'t like jokes??</p><iframe src="https://giphy.com/embed/12fWLm0gSY8kJa" width="480" height="320" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/robert-downey-jr-iron-man-jon-favreau-12fWLm0gSY8kJa">via GIPHY</a></p>');
 }
 
-function getResults(animal, mediaType, mediaGenre, recipe, joke) {
+function getResults(animal, mediaGenre, recipe, joke) {
     $('.results-container').removeClass('hidden');
     //animal preference:
     if (animal == 'dog') {
@@ -92,23 +79,10 @@ function getResults(animal, mediaType, mediaGenre, recipe, joke) {
     }
     //media preference:
     if (mediaGenre == '') {
-        noEntry(mediaType);
+        noEntry();
     }
-    else if (mediaType == 'book') {
-        const url = 'http://openlibrary.org/subjects/' + mediaGenre + '.json'
-        fetch(url)
-        .then(response => {
-        if (response.status == 200) {
-            return response.json();
-        }
-        else {
-            throw new Error(response.message);
-        }
-        })
-        .then(responseJson => showBookRecommendation(responseJson))
-        .catch(err => showError(err))
-    }
-    else if (mediaType == 'show') {
+   
+    else {
         const url = 'https://api.jikan.moe/v3/search/anime?q=' + mediaGenre;
         fetch(url)
         .then(response => {
@@ -169,11 +143,10 @@ function formSubmit() {
         $('.results-container').addClass('hidden');
         $('.error-container').empty().addClass('hidden');
         let animalPref = $('input[name="animal"]:checked').val();
-        let mediaPref = $('input[name="consumable-media"]:checked').val();
         let mediaGenre = $('#genre').val().toLowerCase().replace(' ', '+');
         let recipePref = $('input[name="food"]:checked').val();
         let jokePref = $('input[name="joke"]:checked').val();
-        getResults(animalPref, mediaPref, mediaGenre, recipePref, jokePref);
+        getResults(animalPref, mediaGenre, recipePref, jokePref);
     });
 }
 

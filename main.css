@@ -9,17 +9,9 @@ body {
 }
 
 .navbar {
+    font-size: 18px;
+    border: 1px solid black;
     padding-bottom: 10px;
-    height: 70px;
-}
-
-.navbarToggle {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    cursor: pointer;
-    font-size: 24px;
-    color: #000000;
 }
 
 .navlist {
@@ -27,8 +19,9 @@ body {
     display: none;
 }
 
-.active {
-    display: block;
+.navlink {
+    text-decoration: none;
+    color: black;
 }
 
 .navlist li {
@@ -43,14 +36,24 @@ body {
     height: 50px;
 }
 
-.navlink {
-    text-decoration: none;
+.navbar-toggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #000000;
+}
+
+.active {
+    display: block;
 }
 
 header, section {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    margin-top: 20px;
 }
 
 form {
@@ -104,7 +107,12 @@ button {
         margin-top: 0;
     }
 
-    .navbarToggle {
+    .navbar-toggle {
         display: none;
+    }
+
+    .navlink:hover {
+        color: white;
+        background-color: black;
     }
 }
