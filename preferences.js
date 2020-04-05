@@ -28,9 +28,6 @@ function noEntry(media) {
     else if (media == 'show') {
         $('#media-recommendation').append('<h2>Since you did not enter a genre...</h2><p>My favorite show is Adventure Time! Watch it on Netflix!</p><p>Or, check out my favorite independent animator\'s newest pilot <a href="https://www.youtube.com/watch?v=Zlmswo0S0e0">here</a>!</p>');
     }    
-    else if (media == 'movie') {
-        $('#media-recommendation').append('<h2>Since you did not enter a genre...</h2><p>My favorite movie is Coco! Rent it <a href="https://www.amazon.com/Coco-Theatrical-Version-Anthony-Gonzalez/dp/B0779FPB6Q/ref=sr_1_32?crid=90RBEK8SMA87&keywords=rent+disney+movies+prime+video&qid=1585757942&sprefix=rent+disney+movies+pr%2Caps%2C144&sr=8-32">here</a>!</p>');
-    }
 }
 
 function showBookRecommendation(responseJson) {
