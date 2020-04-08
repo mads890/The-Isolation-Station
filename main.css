@@ -14,17 +14,17 @@ body {
     padding-bottom: 10px;
 }
 
-.navlist {
+.nav-list {
     list-style-type: none;
     display: none;
 }
 
-.navlink {
+.nav-link {
     text-decoration: none;
     color: black;
 }
 
-.navlist li {
+.nav-list li {
     text-align: center;
     margin: 15px auto;
 }
@@ -88,18 +88,18 @@ button {
         align-items: center;
     }
 
-    .navList {
+    .nav-list {
         display: flex;
         margin-right: 30px;
         flex-direction: row;
         justify-content: flex-end;
     }
 
-    .navList li {
+    .nav-list li {
         margin: 0;
     }
 
-    .navLink {
+    .nav-link {
         margin-left: 40px;
     }
 
