@@ -30,7 +30,7 @@ function showShowRecommendation(responseJson) {
     console.log(responseJson);
     let numWorks = responseJson.results.length - 1
     let randomWork = Math.floor((Math.random() * numWorks))
-    $('#media-recommendation').append(`<h2>${responseJson.results[randomWork].title}</h2><img src="${responseJson.results[randomWork].image_url}"><p>More info and videos available <a href="${responseJson.results[randomWork].url}">here</a>!`);
+    $('#media-recommendation').append(`<h2>You should watch ${responseJson.results[randomWork].title}!</h2><img src="${responseJson.results[randomWork].image_url}"><p>More info and videos available <a href="${responseJson.results[randomWork].url}">here</a>!`);
 }
 
 function showRecipe(responseJson) {
