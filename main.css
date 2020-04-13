@@ -10,7 +10,7 @@ body {
 
 .navbar {
     font-size: 18px;
-    border: 1px solid black;
+    border-bottom: 1px solid black;
     padding-bottom: 10px;
 }
 
@@ -56,22 +56,109 @@ header, section {
     margin-top: 20px;
 }
 
+header {
+    margin-top: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+header p {
+    margin-top: 15px;
+}
+
 form {
     margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    padding: 10px;
+    border: 1px solid black;
 }
 
 button {
+    font-size: 24px;
     padding: 10px;
+    margin: 15px;
+    outline: 1px solid black;
+}
+
+.ready {
+    margin-top: 45px;
+}
+
+.bio {
+    margin-top: 15px;
+    padding: 15px;
+}
+
+.bio img {
+    width: 90%;
+}
+
+.bio h2 {
+    margin-top: 15px;
+}
+
+.survey-info {
+    padding: 15px;
+}
+
+.survey-info button {
+    margin: 30px;
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 15px;
+}
+
+.preferences-form button, #retry {
+    margin: 30px;
+}
+
+.results-container button {
+    margin-bottom: 15px;
+}
+
+.feedback-form button {
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.feedback-form input {
+    margin-bottom: 15px;
+}
+
+#message {
+    display: block;
+    width: 85%;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .results {
     margin-top: 20px;
     margin-bottom: 20px;
-    border: 1px solid black;
+    padding: 15px;
+}
+
+.giphy-embed {
+    width: 100%;
 }
 
 .results-container {
     margin-bottom: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.animal-image-result, .food-recommendation img {
+    width: 100%;
+}
+
+.media-recommendation h2, .media-recommendation img, .joke-container h2, .food-recommendation h2, .food-recommendation img {
+    margin-bottom: 10px;
 }
 
 .hidden {

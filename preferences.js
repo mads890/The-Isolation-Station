@@ -8,7 +8,7 @@ function showError(err) {
 function showDogImage(responseJson) {
     $('#animal-image').empty();
     if (responseJson.status == 'success') {
-        $('#animal-image').append(`<img src=${responseJson.message} alt="a very good boy!" class="animalimage">`)
+        $('#animal-image').append(`<img src=${responseJson.message} alt="a very good boy!" class="animal-image-result">`)
     }
     else {
         $('#animal-image').append(`<h2>OH NO!</h2><br/><p>There was a problem with your request, specifically: ${responseJson.message}. Try again later, or <a href="https://www.ecosia.org/images?q=cute+dog+pictures" target="_blank">click here</a> to see some very good boys!.</p>`)
@@ -17,12 +17,12 @@ function showDogImage(responseJson) {
 
 function showCatImage(responseJson) {
     $('#animal-image').empty();
-    $('#animal-image').append(`<img src=${responseJson.file} alt="a very cute kitty!" class="animal-image">`);
+    $('#animal-image').append(`<img src=${responseJson.file} alt="a very cute kitty!" class="animal-image-result">`);
 }
 
 function noEntry() {
     $('#media-recommendation').empty();
-    $('#media-recommendation').append('<h2>Since you did not enter a genre...</h2><p>My favorite show is Adventure Time! Watch it on Netflix!</p><p>Or, check out my favorite independent animator\'s newest pilot <a href="https://www.youtube.com/watch?v=Zlmswo0S0e0">here</a>!</p>');
+    $('#media-recommendation').append('<h2>Surprise!</h2><p>My favorite show is Adventure Time! Watch it on Netflix!</p><p>Or, check out my favorite independent animator\'s newest pilot <a href="https://www.youtube.com/watch?v=Zlmswo0S0e0">here</a>!</p>');
 }
 
 function showShowRecommendation(responseJson) {
@@ -45,7 +45,12 @@ function noRecipe() {
 
 function showJoke(responseJson) {
     $('#joke-container').empty();
-    $('#joke-container').append(`<h2>Here is a joke for you!</h2><p>${responseJson.setup}</p><p>${responseJson.delivery}</p>`);
+    if (responseJson.setup == 'undefined') {
+        $('#joke-container').append(`<h2>Here is a joke for you!</h2><p>Why don\'t aliens eat clowns?</p><p>Because they taste funny!</p>`);
+    }
+    else {
+        $('#joke-container').append(`<h2>Here is a joke for you!</h2><p>${responseJson.setup}</p><p>${responseJson.delivery}</p>`);
+    }
 }
 
 function noJoke() {
@@ -78,7 +83,7 @@ function getResults(animal, mediaGenre, recipe, joke) {
         .catch(err => showError(err))
     }
     //media preference:
-    if (mediaGenre == '') {
+    if (mediaGenre == 'surprise') {
         noEntry();
     }
    
