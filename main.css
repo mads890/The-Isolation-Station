@@ -84,6 +84,8 @@ button {
 
 .ready {
     margin-top: 45px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .bio {
@@ -112,6 +114,10 @@ fieldset {
     margin-bottom: 15px;
 }
 
+#genre {
+    margin-bottom: 15px;
+}
+
 .preferences-form button, #retry {
     margin: 30px;
 }
@@ -129,12 +135,22 @@ fieldset {
     margin-bottom: 15px;
 }
 
+select {
+    border: 1px solid black;
+}
+
 #message {
     display: block;
     width: 85%;
     padding: 10px;
     margin-left: auto;
     margin-right: auto;
+    border: 1px solid black;
+}
+
+#name, #email {
+    border: 1px solid black;
+    padding: 5px;
 }
 
 .results {
@@ -165,7 +181,7 @@ fieldset {
     display: none;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
     
     .navbar {
         display: flex;
@@ -202,4 +218,35 @@ fieldset {
         color: white;
         background-color: black;
     }
+
+    .bio, .survey-info {
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+
+    .index-header, .ready {
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+
+    .about-header, .preferences-header, .survey-header {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .survey-header p {
+        margin-left: 75px;
+        margin-right: 75px;
+    }
+
+    form {
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+
+    .results-container {
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+
 }
