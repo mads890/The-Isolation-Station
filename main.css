@@ -50,9 +50,19 @@ body {
 }
 
 main {
-    height: 100vh;
     background-image: linear-gradient(#ffffff, #005606);
     background-size: cover;
+    height: 100%;
+}
+
+.about-main {
+    background-image: linear-gradient(#ffffff, #e6bfd6);
+    background-size: cover;
+    height: 100%;
+}
+
+.about-header {
+    color: #870052;
 }
 
 header, section {
@@ -121,6 +131,7 @@ button:hover {
 .bio {
     margin-top: 15px;
     padding: 15px;
+    color: #870052;
 }
 
 .bio img {
@@ -133,6 +144,7 @@ button:hover {
 
 .survey-info {
     padding: 15px;
+    color: #870052;
 }
 
 .survey-info button {
@@ -262,6 +274,10 @@ select {
         background-color: black;
     }
 
+    main {
+        height: 100vh;
+    }
+
     .red-cross {
         height: 50vh;
         width: auto;
@@ -300,6 +316,11 @@ select {
 }
 
 @media screen and (min-width: 1200px) {
+    
+    .bio img {
+        width: 50%;
+    }
+
     form {
         width: 60vw;
         margin-left: auto;
