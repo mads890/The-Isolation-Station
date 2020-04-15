@@ -13,6 +13,7 @@ This app uses fetch to get info from multiple APIs, including:
 Link to the live app: https://mads890.github.io/The-Isolation-Station/
 
 Screenshots:
+
 ![screenshot of a joke and a try again button](screenshot1.png)
 ![screenshot of a recipe image and link](screenshot2.png)
 ![screenshot of the homepage button to start the app](screenshot3.png)
