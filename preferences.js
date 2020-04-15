@@ -129,7 +129,7 @@ function getResults(animal, mediaGenre, recipe, joke) {
             return response.json();
         }
         else {
-            throw new Error(response.message);
+            throw new Error(response);
         }
         })
         .then(responseJson => showJoke(responseJson))
