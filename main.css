@@ -49,6 +49,10 @@ body {
     display: block;
 }
 
+.index-header, .ready {
+    color: #005606;
+}
+
 main {
     background-image: linear-gradient(#ffffff, #005606);
     background-size: cover;
@@ -66,7 +70,7 @@ main {
 }
 
 .preferences-main {
-    height: 300vh;
+    height: 400vh;
 }
 
 header, section {
@@ -204,6 +208,16 @@ select {
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 15px;
+}
+
+.results-container h2, .results-container h3, .results-container p {
+    background-color: #005606;
+    border-radius: 15px;
+    color: #ffffff;
+}
+
+.results-container a {
+    color: rgb(255, 255, 184)
 }
 
 .giphy-embed {
