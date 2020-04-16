@@ -34,7 +34,7 @@
         <p>Where all your non-paywall-protected dreams come true!</p>
     </header>
     <section class="preferences-form-container">
-        <h2>Set your preferences...</h2>
+        <h2 class="form-header">Set your preferences...</h2>
         <form class="preferences-form">
             <fieldset id="animal">
                 <legend>Corona makes me sad, please lift my spirits with a cute...</legend>
@@ -79,13 +79,15 @@
     <div class="loader hidden"></div>
 
     <section class="results-container hidden">
-        <h2>Here are your resulst!</h2>
+        <h2>Here are your results!</h2>
         <section class="animal-image results" id="animal-image"></section>
         <section class="media-recommendation results" id="media-recommendation"></section>
         <section class="food-recommendation results" id="food-recommendation"></section>
         <section class="joke-container results" id="joke-container"></section>
-        <h3>Your selection SUCKS. I want to...</h3>
-        <button id="try-again" onclick="location.href='preferences.html'">Try again!</button> <button id="go-to-survey" onclick="location.href='survey.html'">Give feedback!</button>
+        <section class="results">
+            <h3>Your selection SUCKS. I want to...</h3>
+            <button id="try-again" onclick="location.href='preferences.html'">Try again!</button> <button id="go-to-survey" onclick="location.href='survey.html'">Give feedback!</button>
+        </section>
     </section>
 
     <section class="error-container hidden">

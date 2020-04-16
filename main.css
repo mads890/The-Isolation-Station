@@ -49,12 +49,12 @@ body {
     display: block;
 }
 
-.index-header, .ready {
+.index-header, .ready, .preferences-header, .survey-header, .form-header {
     color: #005606;
 }
 
 main {
-    background-image: linear-gradient(#ffffff, #005606);
+    background-image: linear-gradient(#ffffff, #39af40);
     background-size: cover;
     height: 100%;
 }
@@ -169,10 +169,9 @@ fieldset {
 }
 
 .loader {
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
     border: 15px solid #c3c3c3;
     border-top: 15px solid #870052;
     border-radius: 50%;
@@ -234,10 +233,26 @@ select {
     padding: 15px;
 }
 
-.results-container h2, .results-container h3, .results-container p {
+.results h3, .results p {
     background-color: #005606;
     border-radius: 15px;
     color: #ffffff;
+    margin-bottom: 15px;
+    padding: 5px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.results-container h2 {
+    background-color: #005606;
+    border-radius: 15px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    padding: 5px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .results-container a {
