@@ -34,6 +34,7 @@
         <p>Where all your non-paywall-protected dreams come true!</p>
     </header>
     <section class="preferences-form-container">
+        <h2>Set your preferences...</h2>
         <form class="preferences-form">
             <fieldset id="animal">
                 <legend>Corona makes me sad, please lift my spirits with a cute...</legend>
@@ -59,14 +60,13 @@
             </select>
             show!</label>
             <br/>
-
-            <label for="food">Provide me with cooking instructions!</label>
+            <label>Provide me with cooking instructions!</label>
             <input type="radio" name="food" id="give-recipe" value="yes" checked>
             <label for="give-recipe">Yes</label>
             <input type="radio" name="food" id="no-recipe" value="no">
             <label for="no-recipe">No</label>
             <br/>
-            <label for="joke">Tell me a joke!</label>
+            <label>Tell me a joke!</label>
             <input type="radio" name="joke" id="give-joke" value="yes" checked>
             <label for="give-joke">Yes</label>
             <input type="radio" name="joke" id="no-joke" value="no">
@@ -76,7 +76,10 @@
         </form>
     </section>
 
+    <div class="loader hidden"></div>
+
     <section class="results-container hidden">
+        <h2>Here are your resulst!</h2>
         <section class="animal-image results" id="animal-image"></section>
         <section class="media-recommendation results" id="media-recommendation"></section>
         <section class="food-recommendation results" id="food-recommendation"></section>

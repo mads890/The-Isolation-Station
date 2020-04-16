@@ -5,7 +5,6 @@ function formSubmit() {
         event.preventDefault();
         $('.feedback-form-container').addClass('hidden');
         $('.results-container').removeClass('hidden');
-        console.log('formSubmit ran')
     })
 }
 

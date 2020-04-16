@@ -168,6 +168,30 @@ fieldset {
     margin-bottom: 15px;
 }
 
+.loader {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    z-index: 1;
+    border: 15px solid #c3c3c3;
+    border-top: 15px solid #870052;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 1s linear infinite;
+    -webkit-animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 .preferences-form button, #retry {
     margin: 30px;
 }
